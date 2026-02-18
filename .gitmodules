@@ -1,9 +1,12 @@
 [submodule "nvim/.config/nvim"]
 	path = nvim/.config/nvim
 	url = https://github.com/jstentz/nvim.git
+	shallow = true
 [submodule "ghostty/.config/ghostty"]
 	path = ghostty/.config/ghostty
 	url = https://github.com/jstentz/ghostty.git
+	shallow = true
 [submodule "zellij/.config/zellij"]
 	path = zellij/.config/zellij
 	url = https://github.com/jstentz/zellij.git
+	shallow = true
