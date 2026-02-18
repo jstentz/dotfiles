@@ -10,3 +10,7 @@
 	path = zellij/.config/zellij
 	url = https://github.com/jstentz/zellij.git
 	shallow = true
+[submodule "zsh"]
+	path = zsh
+	url = https://github.com/jstentz/zsh.git
+	shallow = true
