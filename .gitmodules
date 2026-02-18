@@ -4,3 +4,6 @@
 [submodule "ghostty/.config/ghostty"]
 	path = ghostty/.config/ghostty
 	url = https://github.com/jstentz/ghostty.git
+[submodule "zellij/.config/zellij"]
+	path = zellij/.config/zellij
+	url = https://github.com/jstentz/zellij.git
