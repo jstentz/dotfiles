@@ -1,12 +1,16 @@
 [submodule "nvim/.config/nvim"]
 	path = nvim/.config/nvim
 	url = https://github.com/jstentz/nvim.git
+	branch = main
 [submodule "ghostty/.config/ghostty"]
 	path = ghostty/.config/ghostty
 	url = https://github.com/jstentz/ghostty.git
+	branch = main
 [submodule "zellij/.config/zellij"]
 	path = zellij/.config/zellij
 	url = https://github.com/jstentz/zellij.git
+	branch = main
 [submodule "zsh"]
 	path = zsh
 	url = https://github.com/jstentz/zsh.git
+	branch = main
