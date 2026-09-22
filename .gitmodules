@@ -1,7 +1,7 @@
 [submodule "nvim/.config/nvim"]
 	path = nvim/.config/nvim
 	url = https://github.com/jstentz/nvim.git
-	branch = main
+	branch = lua
 [submodule "ghostty/.config/ghostty"]
 	path = ghostty/.config/ghostty
 	url = https://github.com/jstentz/ghostty.git
