@@ -15,7 +15,7 @@ return {
     "folke/which-key.nvim",
     event = "VeryLazy",
     opts = {
-      delay = 250,
+      delay = 1000,
       spec = {
         { "<leader>a", group = "AI" },
         { "<leader>h", group = "Git hunk", mode = { "n", "x" } },
