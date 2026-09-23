@@ -1,7 +1,6 @@
 font-family = "Hack Nerd Font Mono"
 font-size = 10
 theme = "Catppuccin Mocha"
-command = "/bin/zsh"
 app-notifications = "no-clipboard-copy"
 window-width = 120
 window-height = 35
