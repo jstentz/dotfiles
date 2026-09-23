@@ -6,6 +6,7 @@ directory:
 - `nvim/` installs into `~/.config/nvim`
 - `ghostty/` installs into `~/.config/ghostty`
 - `zellij/` installs into `~/.config/zellij`
+- `fish/` installs into `~/.config/fish`
 
 ## Installation
 

@@ -10,7 +10,7 @@ if ! command -v stow >/dev/null 2>&1; then
     exit 1
 fi
 
-for package in nvim ghostty zellij; do
+for package in nvim ghostty zellij fish; do
     target="$config_home/$package"
 
     # Remove links made by the old package/.config/package layout. Do not
