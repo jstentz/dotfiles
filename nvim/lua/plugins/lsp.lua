@@ -53,7 +53,7 @@ return {
           local telescope = require("telescope.builtin")
           map("gn", vim.lsp.buf.rename, "Rename")
           map("ga", vim.lsp.buf.code_action, "Code action", { "n", "x" })
-          map("gr", telescope.lsp_references, "References")
+          map("grr", telescope.lsp_references, "References")
           map("gi", telescope.lsp_implementations, "Implementation")
           map("gd", telescope.lsp_definitions, "Definition")
           map("gD", vim.lsp.buf.declaration, "Declaration")

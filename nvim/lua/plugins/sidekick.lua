@@ -2,10 +2,12 @@ return {
   {
     "folke/sidekick.nvim",
     cmd = "Sidekick",
+    dependencies = { "nvim-telescope/telescope.nvim" },
     opts = {
       nes = { enabled = false },
       copilot = { status = { enabled = false } },
       cli = {
+        picker = "telescope",
         mux = {
           enabled = false,
         },
