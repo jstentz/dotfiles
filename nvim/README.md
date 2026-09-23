@@ -53,7 +53,8 @@ The configuration uses these external formatters when available:
 ### Optional integrations
 
 - `openai-codex` enables the Sidekick Codex terminal (`<leader>aa`).
-- `zellij` enables persistent Sidekick terminal sessions.
+- Sidekick opens its CLI in a native Neovim terminal, even when Neovim is
+  running inside Zellij.
 - A system clipboard provider is needed for local clipboard synchronization:
   `wl-clipboard` on Wayland, `xclip` on X11, or the platform equivalent.
 - A Nerd Font is expected by the configured UI icons.

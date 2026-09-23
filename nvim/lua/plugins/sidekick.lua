@@ -7,9 +7,7 @@ return {
       copilot = { status = { enabled = false } },
       cli = {
         mux = {
-          backend = "zellij",
-          enabled = vim.env.ZELLIJ ~= nil,
-          create = "terminal",
+          enabled = false,
         },
         tools = { codex = {} },
       },
