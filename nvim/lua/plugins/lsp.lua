@@ -92,7 +92,10 @@ return {
             "--fallback-style=llvm",
           },
         },
-        rust_analyzer = {},
+        -- Keep the analyzer in lockstep with the Rust toolchain. Mason's
+        -- standalone weekly build can require a newer rustc than the project
+        -- toolchain and would shadow rustup because Mason is first in PATH.
+        rust_analyzer = { cmd = { "rustup", "run", "stable", "rust-analyzer" } },
         ts_ls = {},
         lua_ls = {
           settings = {
@@ -116,11 +119,13 @@ return {
       end
 
       local ensure_installed = vim.tbl_keys(servers)
+      ensure_installed = vim.tbl_filter(function(name) return name ~= "rust_analyzer" end, ensure_installed)
       table.sort(ensure_installed)
       require("mason-lspconfig").setup({
         ensure_installed = ensure_installed,
         automatic_enable = ensure_installed,
       })
+      vim.lsp.enable("rust_analyzer")
     end,
   },
   {

@@ -23,12 +23,24 @@ language servers:
 - `clangd`
 - `lua-language-server`
 - `pyright`
-- `rust-analyzer`
 - `typescript-language-server`
 
 Mason installs the servers, but it does not install the corresponding language
 runtimes or project toolchains. Install Python, a C/C++ toolchain, Node.js, and
 Rust as needed for the projects edited on the machine.
+
+Rust Analyzer is deliberately supplied by rustup instead of Mason. This keeps
+the language server compatible with the Rust compiler rather than pairing an
+older compiler with Mason's latest standalone build. Install the stable
+toolchain and its editor components with:
+
+```sh
+rustup default stable
+rustup component add rust-analyzer rust-src rustfmt
+```
+
+Neovim runs `rustup run stable rust-analyzer`, so project-local toolchain
+overrides do not accidentally select an unavailable or stale analyzer.
 
 ### Formatters
 
@@ -58,9 +70,12 @@ Install the complete toolset with:
 sudo pacman -S --needed \
   neovim git curl tar gzip unzip make gcc ripgrep \
   nodejs npm tree-sitter-cli \
-  python clang rust stylua \
+  python clang rustup stylua \
   zellij wl-clipboard openai-codex
 ```
+
+After installing `rustup`, initialize it and add the Rust components using the
+commands in the Rust Analyzer section above.
 
 Remove language toolchains or optional integrations from that command when they
 are not needed.
