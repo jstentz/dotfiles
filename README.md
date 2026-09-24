@@ -21,5 +21,7 @@ The script uses `$XDG_CONFIG_HOME` when it is set and otherwise installs into
 `~/.config`. It also replaces symlinks created by the repository's previous
 nested Stow layout.
 
-Run the script again after adding a new file or changing the layout. Changes to
-files that are already linked take effect immediately.
+Changes to files that are already linked take effect immediately. To add a new
+configuration file, create it under the matching directory in this repository
+and rerun the script. Stow does not automatically copy new files created under
+`~/.config` back into the repository.
