@@ -82,16 +82,16 @@ return {
     "nvim-telescope/telescope.nvim",
     cmd = "Telescope",
     keys = {
-      { "<leader>sh", function() require("telescope.builtin").find_files({ hidden = true }) end, desc = "Search hidden files" },
-      { "<leader>sk", function() require("telescope.builtin").keymaps() end, desc = "Search keymaps" },
-      { "<leader>sf", function() require("telescope.builtin").find_files() end, desc = "Search files" },
-      { "<leader>ss", function() require("telescope.builtin").builtin() end, desc = "Search pickers" },
-      { "<leader>sw", function() require("telescope.builtin").grep_string() end, desc = "Search current word" },
-      { "<leader>sg", function() require("telescope.builtin").live_grep() end, desc = "Search by grep" },
-      { "<leader>sd", function() require("telescope.builtin").diagnostics() end, desc = "Search diagnostics" },
-      { "<leader>sr", function() require("telescope.builtin").resume() end, desc = "Resume search" },
-      { "<leader>s.", function() require("telescope.builtin").oldfiles() end, desc = "Search recent files" },
-      { "<leader><leader>", function() require("telescope.builtin").buffers() end, desc = "Search buffers" },
+      { "<leader>sh",       function() require("telescope.builtin").find_files({ hidden = true }) end, desc = "Search hidden files" },
+      { "<leader>sk",       function() require("telescope.builtin").keymaps() end,                     desc = "Search keymaps" },
+      { "<leader>sf",       function() require("telescope.builtin").find_files() end,                  desc = "Search files" },
+      { "<leader>ss",       function() require("telescope.builtin").builtin() end,                     desc = "Search pickers" },
+      { "<leader>sw",       function() require("telescope.builtin").grep_string() end,                 desc = "Search current word" },
+      { "<leader>sg",       function() require("telescope.builtin").live_grep() end,                   desc = "Search by grep" },
+      { "<leader>sd",       function() require("telescope.builtin").diagnostics() end,                 desc = "Search diagnostics" },
+      { "<leader>sr",       function() require("telescope.builtin").resume() end,                      desc = "Resume search" },
+      { "<leader>s.",       function() require("telescope.builtin").oldfiles() end,                    desc = "Search recent files" },
+      { "<leader><leader>", function() require("telescope.builtin").buffers() end,                     desc = "Search buffers" },
       {
         "<leader>/",
         function()
@@ -111,7 +111,7 @@ return {
       {
         "<leader>sn",
         function()
-          require("telescope.builtin").find_files({ cwd = vim.fn.stdpath("config"), hidden = true, no_ignore = true })
+          require("telescope.builtin").find_files({ cwd = vim.fn.stdpath("config"), hidden = true, no_ignore = true, follow = true })
         end,
         desc = "Search Neovim config",
       },
@@ -173,12 +173,14 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {},
     keys = {
-      { "<leader>ma", function() require("harpoon"):list():add() end, desc = "Add file mark" },
-      { "<leader>mm", function() local h = require("harpoon"); h.ui:toggle_quick_menu(h:list()) end, desc = "Open marks" },
-      { "<leader>1", function() require("harpoon"):list():select(1) end, desc = "Open mark 1" },
-      { "<leader>2", function() require("harpoon"):list():select(2) end, desc = "Open mark 2" },
-      { "<leader>3", function() require("harpoon"):list():select(3) end, desc = "Open mark 3" },
-      { "<leader>4", function() require("harpoon"):list():select(4) end, desc = "Open mark 4" },
+      { "<leader>ma", function() require("harpoon"):list():add() end,                                desc = "Add file mark" },
+      { "<leader>mm", function()
+        local h = require("harpoon"); h.ui:toggle_quick_menu(h:list())
+      end,                                                                                           desc = "Open marks" },
+      { "<leader>1",  function() require("harpoon"):list():select(1) end,                            desc = "Open mark 1" },
+      { "<leader>2",  function() require("harpoon"):list():select(2) end,                            desc = "Open mark 2" },
+      { "<leader>3",  function() require("harpoon"):list():select(3) end,                            desc = "Open mark 3" },
+      { "<leader>4",  function() require("harpoon"):list():select(4) end,                            desc = "Open mark 4" },
     },
   },
 }
