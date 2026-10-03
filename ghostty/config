@@ -6,7 +6,7 @@ window-width = 120
 window-height = 35
 window-theme = auto
 copy-on-select = clipboard
-scrollback-limit = 50000
+scrollback-limit = 100000000
 adjust-cell-height = 10%
 # Create a config file called "local" in this directory to add machine-specific configurations / overrides.
 config-file = ?local
