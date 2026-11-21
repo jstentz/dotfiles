@@ -23,8 +23,13 @@ window#waybar {
 }
 
 #clock,
+#custom-shortcuts,
 #network,
 #pulseaudio,
 #battery {
     padding: 0 8px;
+}
+
+#custom-shortcuts:hover {
+    background: #303030;
 }

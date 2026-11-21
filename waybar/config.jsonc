@@ -4,7 +4,12 @@
     "height": 26,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["network", "pulseaudio", "battery"],
+    "modules-right": ["custom/shortcuts", "network", "pulseaudio", "battery"],
+    "custom/shortcuts": {
+        "format": "Keys",
+        "tooltip": false,
+        "on-click": "python3 \"${XDG_CONFIG_HOME:-$HOME/.config}/waybar/shortcuts.py\""
+    },
     "clock": {
         "format": "{:%a %b %d  %H:%M}"
     },

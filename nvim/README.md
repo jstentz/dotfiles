@@ -15,7 +15,6 @@ servers.
 - `tree-sitter-cli` 0.26.1 or newer
 - Node.js and npm (used by Mason to install Pyright and the TypeScript server)
 - `ripgrep` (used by Telescope's live grep)
-- `make` (builds Telescope's native fuzzy finder)
 
 After the LSP configuration loads, Mason automatically installs these configured
 language servers:
@@ -52,6 +51,7 @@ The configuration uses these external formatters when available:
 
 ### Optional integrations
 
+- `make` builds Telescope's native fuzzy finder.
 - `openai-codex` enables the Sidekick Codex terminal (`<leader>aa`).
 - Sidekick opens its CLI in a native Neovim terminal, even when Neovim is
   running inside Zellij.
@@ -65,31 +65,14 @@ normal paste action.
 
 ## Arch Linux setup
 
-Install the complete toolset with:
-
-```sh
-sudo pacman -S --needed \
-  neovim git curl tar gzip unzip make gcc ripgrep \
-  nodejs npm tree-sitter-cli \
-  python clang rustup stylua \
-  zellij wl-clipboard openai-codex
-```
-
-After installing `rustup`, initialize it and add the Rust components using the
-commands in the Rust Analyzer section above.
-
-Remove language toolchains or optional integrations from that command when they
-are not needed.
+Use the [Arch package list](../README.md#required-packages-on-arch-linux)
+to install the dotfiles setup and Neovim requirements. Install `clang` for
+`clang-format`. If you install `rustup`, use the commands above to initialize
+the stable toolchain and add its editor components.
 
 ## First launch
 
-From the root of the parent dotfiles repository, initialize its submodules and
-then start Neovim:
-
-```sh
-git submodule update --init --recursive
-nvim
-```
+Start `nvim` after [linking the configuration](../README.md#installation).
 
 Lazy installs the plugins. Opening a supported source file loads the LSP
 configuration and starts Mason's language-server installation. After installation

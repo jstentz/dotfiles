@@ -1,0 +1,11 @@
+[shell]
+polkit_agent = true
+setup_wizard_enabled = false
+
+[theme]
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-content"
+
+[wallpaper.default]
+path = "~/.config/hypr/wallpaper.jpeg"
