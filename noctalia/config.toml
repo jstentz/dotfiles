@@ -6,6 +6,11 @@ setup_wizard_enabled = false
 mode = "dark"
 source = "wallpaper"
 wallpaper_scheme = "m3-content"
+sync_color_scheme = true
+
+[hooks]
+started = 'sh "${NOCTALIA_CONFIG_HOME:-${XDG_CONFIG_HOME:-$HOME/.config}/noctalia}/sync-gtk-theme.sh"'
+theme_mode_changed = 'sh "${NOCTALIA_CONFIG_HOME:-${XDG_CONFIG_HOME:-$HOME/.config}/noctalia}/sync-gtk-theme.sh"'
 
 [wallpaper.default]
 path = "~/.config/hypr/wallpaper.jpeg"

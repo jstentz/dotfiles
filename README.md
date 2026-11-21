@@ -58,7 +58,7 @@ Ghostty is configured to use Hack Nerd Font Mono.
 ### Hyprland and Noctalia
 
 ```sh
-sudo pacman -S --needed hyprland noctalia upower kitty dolphin \
+sudo pacman -S --needed hyprland noctalia upower kitty thunar \
   wireplumber brightnessctl playerctl
 ```
 
@@ -97,10 +97,12 @@ launcher. Noctalia uses the bundled `hypr/wallpaper.jpeg` under the default
 `~/.config` layout. If you use a custom `XDG_CONFIG_HOME`, update the wallpaper
 path in `noctalia/config.toml`.
 
-Noctalia Settings saves local overrides to
-`${XDG_STATE_HOME:-$HOME/.local/state}/noctalia/settings.toml`. Use
-**Export Config → Merged User Config** to bring changes you want to keep into
-`noctalia/config.toml`. Local overrides take precedence over that file.
+Noctalia Settings saves overrides to
+`${XDG_STATE_HOME:-$HOME/.local/state}/noctalia/settings.toml`.
+`./stow.sh` links that path to `noctalia-state/settings.toml` in this repo so
+changes made in the app show up in Git. If a settings file already exists,
+the script leaves it in place. Back it up before replacing it with the repo copy.
+These overrides take precedence over `noctalia/config.toml`.
 
 The Waybar config is available for manual use. Its **Keys** button uses
 `python` and `hyprlauncher` to show active bindings that have a `description`
