@@ -59,11 +59,12 @@ Ghostty is configured to use Hack Nerd Font Mono.
 
 ```sh
 sudo pacman -S --needed hyprland noctalia upower kitty thunar \
-  wireplumber brightnessctl playerctl
+  wireplumber brightnessctl playerctl adw-gtk-theme
 ```
 
 Kitty and Dolphin power the terminal and file manager shortcuts. WirePlumber,
 Brightnessctl, and Playerctl handle volume, brightness, and media keys.
+Noctalia's GTK 3 and GTK 4 templates use `adw-gtk-theme` for app theming.
 UPower provides battery status. If you skipped power management in Archinstall,
 install `power-profiles-daemon` and enable it with
 `sudo systemctl enable --now power-profiles-daemon.service`. Install

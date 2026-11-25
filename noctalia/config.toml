@@ -8,9 +8,9 @@ source = "wallpaper"
 wallpaper_scheme = "m3-content"
 sync_color_scheme = true
 
-[hooks]
-started = 'sh "${NOCTALIA_CONFIG_HOME:-${XDG_CONFIG_HOME:-$HOME/.config}/noctalia}/sync-gtk-theme.sh"'
-theme_mode_changed = 'sh "${NOCTALIA_CONFIG_HOME:-${XDG_CONFIG_HOME:-$HOME/.config}/noctalia}/sync-gtk-theme.sh"'
+[theme.templates]
+enable_builtin_templates = true
+builtin_ids = ["gtk3", "gtk4"]
 
 [wallpaper.default]
 path = "~/.config/hypr/wallpaper.jpeg"
