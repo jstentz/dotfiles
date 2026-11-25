@@ -30,6 +30,9 @@ behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
     enabled = true
     timeout = 660.0
 
+[location]
+address = "New York, US"
+
 [lockscreen]
 transition = []
 
@@ -72,11 +75,8 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
         show_unlock_hint = true
         show_weather = true
 
-[shell]
-font_family = "Adwaita Mono"
-
-    [shell.animation]
-    enabled = false
+[shell.animation]
+enabled = false
 
 [theme]
 builtin = "Noctalia"
@@ -84,3 +84,15 @@ community_palette = "Oxocarbon"
 mode = "dark"
 source = "wallpaper"
 wallpaper_scheme = "m3-content"
+
+[wallpaper.default]
+path = "/home/jasons/Pictures/Wallpapers/wallpaper.jpeg"
+
+[wallpaper.last]
+path = "/home/jasons/Pictures/Wallpapers/wallpaper.jpeg"
+
+[wallpaper.monitors.eDP-1]
+path = "/home/jasons/Pictures/Wallpapers/wallpaper.jpeg"
+
+[weather]
+unit = "imperial"

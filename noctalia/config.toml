@@ -10,7 +10,17 @@ sync_color_scheme = true
 
 [theme.templates]
 enable_builtin_templates = true
-builtin_ids = ["gtk3", "gtk4"]
+builtin_ids = ["luciole", "gtk3", "gtk4"]
+
+[wallpaper]
+directory = "~/Pictures/Wallpapers"
 
 [wallpaper.default]
 path = "~/.config/hypr/wallpaper.jpeg"
+
+[widget.workspaces]
+hide_when_empty = true
+
+[widget.media]
+hide_when_no_media = true
+hide_when_idle = true

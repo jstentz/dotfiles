@@ -100,9 +100,9 @@ path in `noctalia/config.toml`.
 
 Noctalia Settings saves overrides to
 `${XDG_STATE_HOME:-$HOME/.local/state}/noctalia/settings.toml`.
-`./stow.sh` links that path to `noctalia-state/settings.toml` in this repo so
-changes made in the app show up in Git. If a settings file already exists,
-the script leaves it in place. Back it up before replacing it with the repo copy.
+`./stow.sh` links that path to `noctalia/settings.toml` in this repo so
+changes made in the app show up in Git. The script updates symlinks created by
+the previous layout and leaves other existing settings files in place.
 These overrides take precedence over `noctalia/config.toml`.
 
 The Waybar config is available for manual use. Its **Keys** button uses
