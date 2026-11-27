@@ -10,7 +10,28 @@ if ! command -v stow >/dev/null 2>&1; then
     exit 1
 fi
 
-for package in nvim ghostty zellij fish hypr noctalia umbriel; do
+packages='nvim ghostty zellij fish hypr noctalia umbriel'
+if [ "$#" -gt 2 ]; then
+    echo "Usage: $0 [package] or $0 <first-argument> <package>" >&2
+    exit 1
+fi
+if [ "$#" -gt 0 ]; then
+    selected=${2-$1}
+    found=false
+    for package in $packages; do
+        if [ "$selected" = "$package" ]; then
+            found=true
+            break
+        fi
+    done
+    if [ "$found" = false ]; then
+        echo "Unknown package '$selected'. Available packages: $packages" >&2
+        exit 1
+    fi
+    packages=$selected
+fi
+
+for package in $packages; do
     target="$config_home/$package"
 
     # Remove links made by the old package/.config/package layout. Do not
@@ -37,6 +58,10 @@ for package in nvim ghostty zellij fish hypr noctalia umbriel; do
     mkdir -p "$target"
     stow --restow --dir="$repo_root" --target="$target" "$@" "$package"
 done
+
+if [ "${selected-noctalia}" != noctalia ]; then
+    exit 0
+fi
 
 # Noctalia writes Settings overrides under XDG_STATE_HOME.
 noctalia_state=${XDG_STATE_HOME:-"$HOME/.local/state"}/noctalia
